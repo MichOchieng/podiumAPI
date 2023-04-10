@@ -1,10 +1,9 @@
-from cmath import log
 import pickle
 import datetime
 import pandas as pd
 from pathlib import Path
 
-FILENAME = "treeModel.pkl"
+FILENAME = "model.pkl"
 BASE_DIR = Path(__file__).resolve(strict=True).parent
 
 # Init model
@@ -12,7 +11,7 @@ with open(f"{BASE_DIR}/{FILENAME}", "rb") as file:
     model = pickle.load(file)
 
 columns = [
-    'avglap',
+    'avglap', 
     'circuit_Albert Park Grand Prix Circuit',
     'circuit_Autodromo Enzo e Dino Ferrari',
     'circuit_Autodromo Internazionale del Mugello',
@@ -20,19 +19,29 @@ columns = [
     'circuit_Autódromo Hermanos Rodríguez',
     'circuit_Autódromo Internacional do Algarve',
     'circuit_Autódromo José Carlos Pace',
-    'circuit_Bahrain International Circuit', 'circuit_Baku City Circuit',
-    'circuit_Circuit Gilles Villeneuve', 'circuit_Circuit Park Zandvoort',
-    'circuit_Circuit Paul Ricard', 'circuit_Circuit de Barcelona-Catalunya',
-    'circuit_Circuit de Monaco', 'circuit_Circuit de Spa-Francorchamps',
-    'circuit_Circuit of the Americas', 'circuit_Hockenheimring',
-    'circuit_Hungaroring', 'circuit_Istanbul Park',
+    'circuit_Bahrain International Circuit', 
+    'circuit_Baku City Circuit',
+    'circuit_Circuit Gilles Villeneuve', 
+    'circuit_Circuit Park Zandvoort',
+    'circuit_Circuit Paul Ricard', 
+    'circuit_Circuit de Barcelona-Catalunya',
+    'circuit_Circuit de Monaco', 
+    'circuit_Circuit de Spa-Francorchamps',
+    'circuit_Circuit of the Americas', 
+    'circuit_Hockenheimring',
+    'circuit_Hungaroring', 
+    'circuit_Istanbul Park',
     'circuit_Jeddah Corniche Circuit',
     'circuit_Losail International Circuit',
     'circuit_Marina Bay Street Circuit',
-    'circuit_Miami International Autodrome', 'circuit_Nürburgring',
-    'circuit_Red Bull Ring', 'circuit_Sepang International Circuit',
-    'circuit_Shanghai International Circuit', 'circuit_Silverstone Circuit',
-    'circuit_Sochi Autodrom', 'circuit_Suzuka Circuit',
+    'circuit_Miami International Autodrome', 
+    'circuit_Nürburgring',
+    'circuit_Red Bull Ring', 
+    'circuit_Sepang International Circuit',
+    'circuit_Shanghai International Circuit', 
+    'circuit_Silverstone Circuit',
+    'circuit_Sochi Autodrom', 
+    'circuit_Suzuka Circuit',
     'circuit_Yas Marina Circuit'
 ]
 # Init df
