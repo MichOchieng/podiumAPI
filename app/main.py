@@ -1,7 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-from model.model import predict, prependCircuit, convertTime
+from app.model.model import predict, prependCircuit, convertTime
 
 app = FastAPI()
 
