@@ -1,6 +1,7 @@
+import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.model.model import predict, prependCircuit, convertTime
+from model.model import predict, prependCircuit, convertTime
 
 app = FastAPI()
 
@@ -24,3 +25,6 @@ def _predict(payload: Inputs):
     # Predict
     podium  = predict(time=time,circuit=circuit)
     return { "podium" : podium } 
+
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
