@@ -19,7 +19,7 @@ app.add_middleware(
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=['*'],
-    allows_header=["*"]
+    allow_headers=["*"]
 )
 
 class Inputs(BaseModel):
